@@ -1,0 +1,26 @@
+{
+  "name": "react-proptype-error-catcher",
+  "version": "1.0.0",
+  "description": "Causes React PropType errors to fail the test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurtisHumphrey/react-proptype-error-catcher.git"
+  },
+  "keywords": [
+    "react",
+    "sinon",
+    "enzyme",
+    "testing",
+    "proptypes"
+  ],
+  "author": "Curtis M. Humphrey, Ph.D.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CurtisHumphrey/react-proptype-error-catcher/issues"
+  },
+  "homepage": "https://github.com/CurtisHumphrey/react-proptype-error-catcher#readme"
+}
