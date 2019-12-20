@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/CurtisHumphrey/react-proptype-error-catcher#readme",
   "devDependencies": {
-    "standard-version": "^4.2.0"
+    "standard-version": "^7.0.1"
   }
 }
