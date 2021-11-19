@@ -12,74 +12,34 @@ Using [npm](https://www.npmjs.com/):
 ## Requirements
 
 * [React](https://github.com/facebook/react)
-
-If using `import { for_sinon as proptype_error_catcher } from 'react-proptype-error-catcher'`
-* [sinon](https://github.com/sinonjs/sinon)
-
-If using `import { for_jest as proptype_error_catcher } from 'react-proptype-error-catcher'`
 * [jest](https://github.com/facebook/jest)
-
+  
 ## Usage
 
-### with sinon and enzyme
-``` js
-import React from 'react'
-import { shallow } from 'enzyme'
+### Enable always
+in jest config (jest.config.js) add to `setupFilesAfterEnv` like:
 
-import Example from './Example'
-import { for_sinon as proptype_error_catcher } from 'react-proptype-error-catcher'
-
-describe('<Example />', () => {
-  let sandbox
-  let props
-
-  beforeEach(() => {
-    sandbox = sinon.sandbox.create()
-
-    proptype_error_catcher(sandbox)
-
-    props = {
-      show: true,
-    }
-  })
-
-  afterEach(() => {
-    sandbox.restore()
-  })
-  it('with normal props it should render without errors', () => {
-    const wrapper = shallow(<Example {...props} />)
-    expect(wrapper).to.exist
-  })
-})
+```js
+setupFilesAfterEnv: [
+  'react-proptype-error-catcher/register',
+],
 ```
+
+Or if using `setupTests.js` like for [create-react-app](https://create-react-app.dev/docs/running-tests#srcsetuptestsjs) (CRA) then add like
+```js
+import 'react-proptype-error-catcher/register';
+```
+
+### Per test setup
+If wanted to only turn on per test use this pattern:
 
 ### with jest and react-testing-library
 ``` js
-import React from 'react'
-import { render } from '@testing-library/react'
+import proptype_error_catcher from 'react-proptype-error-catcher'
 
-import Example from './Example'
-import { for_jest as proptype_error_catcher } from 'react-proptype-error-catcher'
-
-proptype_error_catcher(jest)
-
-let props
-beforeEach(() => {
-  props = {
-    show: true,
-  }
-})
+proptype_error_catcher()
 
 it('with normal props it should render without errors', () => {
-  const { container } = render(<Example {...props} />)
-  expect(container.firstChild).toBeInTheDocument()
+  // test logic
 })
 ```
-
-## API
-
-### sinon version
-* Takes just one argument: a sinon.sandbox
-
-### jest version
-* Takes just one argument: jest

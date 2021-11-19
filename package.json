@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "yarn upgrade-interactive --latest",
     "release": "standard-version"
   },
   "repository": {
@@ -25,6 +26,6 @@
   },
   "homepage": "https://github.com/CurtisHumphrey/react-proptype-error-catcher#readme",
   "devDependencies": {
-    "standard-version": "^7.0.1"
+    "standard-version": "^9.3.2"
   }
 }
