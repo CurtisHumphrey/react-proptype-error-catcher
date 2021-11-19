@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/CurtisHumphrey/react-proptype-error-catcher/compare/v2.0.0...v3.0.0) (2021-11-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed enzyme supported, changed to a simpler usage
+
+### Features
+
+* change to use a jest registration approach and removed enzyme ([72ab403](https://github.com/CurtisHumphrey/react-proptype-error-catcher/commit/72ab4034ec2e6ead128844814e5cd4691d6e0975))
+
 ## [2.0.0](https://github.com/CurtisHumphrey/react-proptype-error-catcher/compare/v1.1.3...v2.0.0) (2019-12-30)
 
 
