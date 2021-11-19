@@ -1,6 +1,6 @@
 {
   "name": "react-proptype-error-catcher",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Causes React PropType errors to fail the test",
   "main": "index.js",
   "scripts": {
